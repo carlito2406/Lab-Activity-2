@@ -7,12 +7,6 @@ public class Truck extends Vehicle {
     }
 
     @Override
-    public void displayInfo() {
-        super.displayInfo();
-        System.out.println("Type: Truck | Wheels: " + wheels);
-    }
-
-    @Override
     public void moveForward() {
         System.out.println("A truck moves forward");
     }
@@ -30,5 +24,11 @@ public class Truck extends Vehicle {
     @Override
     public void moveRight() {
         System.out.println("A truck moves right");
+    }
+
+    @Override
+    public void displayInfo() {
+        super.displayInfo();
+        System.out.println("Type: Truck | Wheels: " + wheels);
     }
 }
