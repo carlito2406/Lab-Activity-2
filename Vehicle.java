@@ -1,9 +1,11 @@
 public abstract class Vehicle {
+
     private String brand;
     private String model;
     private int year;
 
-    public Vehicle(String brand, String model, int year) {
+    // Constructor
+    Vehicle(String brand, String model, int year) {
         this.brand = brand;
         this.model = model;
 
@@ -14,6 +16,7 @@ public abstract class Vehicle {
         }
     }
 
+    // Getters
     public String getBrand() {
         return brand;
     }
@@ -26,6 +29,7 @@ public abstract class Vehicle {
         return year;
     }
 
+    // Set year with validation
     public boolean setYear(int year) {
         if (year >= 1886 && year <= 2026) {
             this.year = year;
@@ -35,26 +39,24 @@ public abstract class Vehicle {
         return false;
     }
 
+    // Abstract methods (must be implemented by every subclass)
+    public abstract void moveForward();
+    public abstract void moveBackwards();
+    public abstract void moveLeft();
+    public abstract void moveRight();
+
+    // Original method
     public void displayInfo() {
-        System.out.println("Brand: " + brand);
-        System.out.println("Model: " + model);
-        System.out.println("Year: " + year);
+        System.out.println(brand + " " + model + " " + year);
     }
 
-    public int calculateAge() {
+    // Original method
+    int calculateAge() {
         return 2026 - year;
     }
 
-    public boolean isVintage() {
+    // Original method
+    boolean isVintage() {
         return calculateAge() > 25;
     }
-
-    // Abstract methods: every subclass must implement these
-    public abstract void moveForward();
-
-    public abstract void moveBackwards();
-
-    public abstract void moveLeft();
-
-    public abstract void moveRight();
 }
