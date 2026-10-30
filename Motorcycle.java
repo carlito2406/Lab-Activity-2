@@ -7,12 +7,6 @@ public class Motorcycle extends Vehicle {
     }
 
     @Override
-    public void displayInfo() {
-        super.displayInfo();
-        System.out.println("Type: Motorcycle | Fuel: " + fuelType);
-    }
-
-    @Override
     public void moveForward() {
         System.out.println("A motorcycle moves forward");
     }
@@ -30,5 +24,11 @@ public class Motorcycle extends Vehicle {
     @Override
     public void moveRight() {
         System.out.println("A motorcycle moves right");
+    }
+
+    @Override
+    public void displayInfo() {
+        super.displayInfo();
+        System.out.println("Type: Motorcycle | Fuel: " + fuelType);
     }
 }
