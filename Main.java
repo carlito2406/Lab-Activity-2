@@ -1,4 +1,4 @@
-public class main {
+public class Main {
     public static void printDetails(Vehicle vehicle) {
         vehicle.displayInfo();
     }
@@ -32,6 +32,10 @@ public class main {
 
         for (Vehicle currentVehicle : vehicles) {
             printDetails(currentVehicle);
+            currentVehicle.moveForward();
+            currentVehicle.moveBackwards();
+            currentVehicle.moveLeft();
+            currentVehicle.moveRight();
             System.out.println();
         }
     }
