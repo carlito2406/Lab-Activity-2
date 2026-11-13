@@ -1,4 +1,4 @@
-public class Vehicle {
+public abstract class Vehicle {
 
     private String brand;
     private String model;
@@ -39,8 +39,14 @@ public class Vehicle {
         return false;
     }
 
+    // Abstract methods (must be implemented by every subclass)
+    public abstract void moveForward();
+    public abstract void moveBackwards();
+    public abstract void moveLeft();
+    public abstract void moveRight();
+
     // Original method
-    void displayInfo() {
+    public void displayInfo() {
         System.out.println(brand + " " + model + " " + year);
     }
 
