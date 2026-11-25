@@ -1,1 +1,1 @@
-# Lab-Activity-2
+# Lab Activity 2 - Packages
